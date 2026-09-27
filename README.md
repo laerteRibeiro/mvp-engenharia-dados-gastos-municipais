@@ -18,6 +18,7 @@ Os dados foram coletados de duas fontes públicas oficiais:
 - **IBGE**: API de localidades (`servicodados.ibge.gov.br`) para mapeamento de município, UF e região; e estimativas populacionais 2025, para cálculo dos indicadores per capita.
 
 **Metodologia de amostragem**: como o Brasil possui 5.571 municípios e cada um exige uma chamada individual à API do SICONFI (o parâmetro `id_ente` é obrigatório, não havendo endpoint de consulta em lote), optou-se por uma amostra estratificada por porte populacional (Pequeno, Médio, Grande, Metrópole) cruzada com região, garantindo a inclusão total das 27 capitais (26 estados + DF). A amostra final totalizou 486 municípios, dos quais 478 permaneceram após a exclusão de 8 municípios sem retorno de dados de receita (ver seção de Qualidade de Dados).
+Entre os 8 municípios excluídos está Brasília/DF, uma das 27 capitais originalmente incluídas na amostra. Dessa forma, a amostra analítica final (478 municípios) contempla 26 das 27 capitais brasileiras.
 
 **Nota sobre continuidade do trabalho**: durante o desenvolvimento, houve um momento de confusão entre duas contas Databricks (pessoal e empresarial), que inicialmente pareceu indicar perda de dados. Ao identificar e acessar a conta correta, confirmou-se que todas as tabelas Bronze/Silver/Gold estavam intactas, e o trabalho prosseguiu normalmente dentro da plataforma Databricks, sem necessidade de reprocessamento.
 
