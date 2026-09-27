@@ -46,7 +46,7 @@ O pipeline foi implementado em dois notebooks PySpark no Databricks, conectados 
 Todo o código está versionado no repositório GitHub e sincronizado com o Databricks via Git folder, permitindo rastreabilidade completa das transformações aplicadas.
 
 ## 5. Qualidade de Dados
-**Completude**: 8 dos 486 municípios da amostra não retornaram dados de receita na API do SICONFI. Um deles é Brasília-DF, que possui estrutura administrativa atípica (não é município tradicional); os outros 7 provavelmente ainda não haviam enviado a DCA de 2025 no momento da coleta. Esses 8 foram excluídos da amostra final (478 municípios).
+**Completude**: 8 dos 486 municípios da amostra não retornaram dados de receita na API do SICONFI. Um deles é Brasília-DF, que possui estrutura administrativa atípica (não é município tradicional). Para os outros 7, a API não retornou dados de receita no momento da coleta; a ausência pode estar relacionada à indisponibilidade ou a atraso na publicação da DCA de 2025, mas essa hipótese não foi confirmada diretamente. Esses 8 municípios foram excluídos da amostra final (478 municípios).
 
 **Consistência**: a API de localidades do IBGE retornou `microrregiao: None` para algumas entradas. Foi implementado um fallback usando `regiao-imediata.regiao-intermediaria.UF` para garantir que todo município tivesse uma região válida associada.
 
