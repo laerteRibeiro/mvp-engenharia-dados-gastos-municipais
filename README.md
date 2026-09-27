@@ -72,6 +72,14 @@ No recorte específico das capitais, chama atenção o caso do **Rio de Janeiro*
 
 Os maiores gastos per capita da amostra estão concentrados em municípios pequenos, reforçando o efeito de custo fixo já mencionado. Já entre os menores gastos per capita, destacam-se municípios da Baixada Fluminense (como São Gonçalo, Nova Iguaçu e Belford Roxo) e grandes municípios de Pernambuco — um padrão que pode ser relacionado ao coeficiente decrescente do FPM (Fundo de Participação dos Municípios): municípios maiores recebem uma fatia proporcionalmente menor por habitante desse fundo, o que pressiona para baixo sua capacidade de gasto per capita, mesmo tendo maior orçamento absoluto.
 
+![Pergunta 1 - % receita médio por função](pergunta1_pct_receita.png)
+![Pergunta 2 - média simples por região](pergunta2_simples.png)
+![Pergunta 2 - média ponderada por região](pergunta2_ponderada.png)
+![Pergunta 3 - TOP 10 Educação](pergunta3_top10.png)
+![Pergunta 3 - BOTTOM 10 Educação](pergunta3_bottom10.png)
+![Pergunta 3 - Capitais Educação](pergunta3_capitais_educacao.png)
+![Pergunta 3 - Capitais Saúde](pergunta3_capitais_saude.png)
+
 ## 7. Autoavaliação
 O que eu mais valorizei realizando esta MVP é que eu tinha um entendimento de que o Engenheiro de Dados atuava muito mais na infraestrutura de dados, modelando e preparando as bases para os cientistas e analistas realizarem o trabalho. Por esse entendimento, eu me "afastava" da engenharia de dados. Realizando este MVP, pude entender que o Engenheiro de Dados também pode fazer parte do processo de tomada de decisão, trabalhando na busca de respostas para as perguntas de negócio.
 
