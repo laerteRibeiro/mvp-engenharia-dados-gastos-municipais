@@ -19,7 +19,7 @@ Os dados foram coletados de duas fontes públicas oficiais:
 
 **Metodologia de amostragem**: como o Brasil possui 5.571 municípios e cada um exige uma chamada individual à API do SICONFI (o parâmetro `id_ente` é obrigatório, não havendo endpoint de consulta em lote), optou-se por uma amostra estratificada por porte populacional (Pequeno, Médio, Grande, Metrópole) cruzada com região, garantindo a inclusão total das 27 capitais (26 estados + DF). A amostra final totalizou 486 municípios, dos quais 478 permaneceram após a exclusão de 8 municípios sem retorno de dados de receita (ver seção de Qualidade de Dados).
 
-**Ambiente de execução**: a coleta foi originalmente executada em notebooks no Databricks Free Edition. Devido a uma restrição de acesso à internet imposta pela plataforma em determinado momento do desenvolvimento, uma parte da coleta precisou ser reexecutada em ambiente externo (Google Colab), com o resultado posteriormente ingerido de volta ao pipeline no Databricks — decisão registrada como parte da gestão de riscos de infraestrutura do projeto.
+**Nota sobre continuidade do trabalho**: durante o desenvolvimento, houve um momento de confusão entre duas contas Databricks (pessoal e empresarial), que inicialmente pareceu indicar perda de dados. Ao identificar e acessar a conta correta, confirmou-se que todas as tabelas Bronze/Silver/Gold estavam intactas, e o trabalho prosseguiu normalmente dentro da plataforma Databricks, sem necessidade de reprocessamento.
 
 ## 3. Modelagem e Catálogo de Dados
 O modelo de dados segue uma arquitetura em **Star Schema**, com uma tabela de dimensão (`dim_municipios`, contendo código IBGE, nome, UF, região, população 2025, porte populacional e indicador de capital) e tabelas de fato para despesas e receitas.
