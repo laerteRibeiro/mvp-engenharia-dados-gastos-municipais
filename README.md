@@ -50,7 +50,7 @@ Todo o código está versionado no repositório GitHub e sincronizado com o Data
 
 **Consistência**: a API de localidades do IBGE retornou `microrregiao: None` para algumas entradas. Foi implementado um fallback usando `regiao-imediata.regiao-intermediaria.UF` para garantir que todo município tivesse uma região válida associada.
 
-**Acurácia**: identificou-se divergência entre a população utilizada para os indicadores per capita (estimativa IBGE 2025) e uma população embutida no próprio retorno da API do SICONFI, que serve a outra finalidade (provavelmente cálculo do FPM). Optou-se pela estimativa IBGE 2025 por ser a referência demográfica oficial mais atual.
+**Consistência semântica**: identificou-se a existência de dois campos de população nos dados: a estimativa IBGE 2025 e uma população embutida no próprio retorno da API do SICONFI. Não se trata de um valor incorreto, mas de dois campos com finalidades distintas — o segundo provavelmente utilizado para fins de cálculo do FPM. Para os indicadores per capita deste trabalho, foi utilizada a estimativa populacional do IBGE 2025, por ser a referência demográfica oficial mais atual.
 
 **Unicidade**: verificado que a tabela `dim_municipios` não contém `cod_ibge` duplicado (0 ocorrências). Na tabela `gold_despesas_indicadores`, cuja granularidade é município x função de despesa, confirmou-se que a combinação (`cod_ibge`, `codigo_funcao`) também não apresenta duplicatas.
 
