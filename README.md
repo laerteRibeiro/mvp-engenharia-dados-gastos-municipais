@@ -32,7 +32,9 @@ A implementação segue o padrão de arquitetura **Medallion** (Bronze / Silver 
 
 Todas as tabelas e suas colunas foram documentadas diretamente no Unity Catalog, via `COMMENT ON TABLE` e `ALTER TABLE ... ALTER COLUMN ... COMMENT`, funcionando como o catálogo de dados do projeto.
 
-*(Print do Catálogo Explorer com os comentários das tabelas: [inserir aqui a screenshot])*
+![Catálogo - gold_despesas_indicadores](catalogo_gold.png)
+![Catálogo - silver_despesas_funcao](catalogo_silver.png)
+![Catálogo - dim_municipios](catalogo_dim.png)
 
 ## 4. Pipeline de Dados (ETL)
 O pipeline foi implementado em dois notebooks PySpark no Databricks, conectados ao repositório GitHub via Git folder:
